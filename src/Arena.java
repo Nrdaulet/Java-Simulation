@@ -31,4 +31,7 @@ public class Arena {
         return map.get(coordinates);
     }
 
+    public void getContribution(){
+
+    }
 }
