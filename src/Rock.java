@@ -1,2 +1,5 @@
-public class Rock {
+public class Rock extends Entity{
+    public Rock(String icon) {
+        super(icon);
+    }
 }

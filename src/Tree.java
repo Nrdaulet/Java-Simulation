@@ -1,2 +1,5 @@
-public class Tree {
+public class Tree extends Entity{
+    public Tree(String icon) {
+        super(icon);
+    }
 }
