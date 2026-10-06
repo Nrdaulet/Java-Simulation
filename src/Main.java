@@ -9,5 +9,7 @@ public class Main{
         world.setEntity(coordinates1, entity1);
         world.setEntity(coordinates2, entity2);
         world.moveEntity(coordinates2, coordinates3);
+        world.moveEntity(coordinates1, coordinates3);
+
     }
 }
