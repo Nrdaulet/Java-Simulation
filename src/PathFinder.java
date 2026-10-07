@@ -9,5 +9,11 @@ public class PathFinder {
         Queue<Coordinates> queue = new ArrayDeque<>();
 
 
+        while(!queue.isEmpty()){
+            if(queue.poll() == )
+        }
+
+        return true;
+
     }
 }
