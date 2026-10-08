@@ -8,6 +8,10 @@ public abstract class Entity {
         this.icon=icon;
     }
 
+    public String getIcon(){
+        return icon;
+    }
+
 
     public Coordinates getCoordinates(){
         return coordinates;
