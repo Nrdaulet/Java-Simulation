@@ -5,8 +5,9 @@ public abstract class Entity {
     private Coordinates coordinates;
 
     public Entity(String icon){
-        this.icon=icon;
+        this.icon = icon;
     }
+
 
     public String getIcon(){
         return icon;
