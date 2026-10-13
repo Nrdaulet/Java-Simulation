@@ -1,17 +1,15 @@
-public class Simulation {
+import java.util.List;
 
-    public void render(World world){
-        for(int y = 0;y<world.getHeight();y++){
-            for(int x = 0;x<world.getWidth();x++){
-                Coordinates coordinates = new Coordinates(x ,y);
-                Entity entity = world.getEntity(coordinates);
-                if(world.isEmpty(coordinates)){
-                    System.out.print("⬜ ");
-                }else{
-                    System.out.print(entity.getIcon() + " ");
-                }
-            }
-            System.out.println();
-        }
+public class Simulation {
+    World world = new World(5,5);
+
+    private final List<Action> initActions;
+    private final List<Action> turnActions;
+    Renderer renderer = new Renderer();
+
+
+    public Simulation(List<Action> initActions, List<Action> turnActions) {
+        this.initActions = initActions;
+        this.turnActions = turnActions;
     }
 }

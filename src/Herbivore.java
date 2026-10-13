@@ -1,5 +1,7 @@
-public class Herbivore extends Creature implements Ediable{
-    private static final int NUTRITION = 10;
+public class Herbivore extends Creature{
+    private int hp;
+
+
     public Herbivore(String icon, int speed, int health) {
         super("🐇", speed, health);
     }
@@ -9,9 +11,10 @@ public class Herbivore extends Creature implements Ediable{
 
     }
 
-
-    @Override
-    public int getNutrition() {
-        return NUTRITION;
+    public int getHp() {
+        return hp;
+    }
+    public void takeDamage(int damage){
+        hp-=damage;
     }
 }
