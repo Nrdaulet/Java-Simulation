@@ -1,6 +1,6 @@
 import java.lang.classfile.attribute.StackMapTableAttribute;
 
-public class Grass extends Entity implements Ediable{
+public class Grass extends Entity {
     private static final int NUTRITION = 5;
 
     public Grass(){
@@ -9,10 +9,5 @@ public class Grass extends Entity implements Ediable{
     public Grass(String icon) {
         super(icon);
 
-    }
-
-    @Override
-    public int getNutrition() {
-        return NUTRITION;
     }
 }

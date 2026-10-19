@@ -12,4 +12,6 @@ public class Simulation {
         this.initActions = initActions;
         this.turnActions = turnActions;
     }
+
+    
 }

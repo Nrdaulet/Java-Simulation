@@ -2,7 +2,7 @@ public class Herbivore extends Creature{
     private int hp;
 
 
-    public Herbivore(String icon, int speed, int health) {
+    public Herbivore(int speed, int health) {
         super("🐇", speed, health);
     }
 
