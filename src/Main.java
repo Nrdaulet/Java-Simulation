@@ -12,5 +12,8 @@ public class Main{
         initWorldAction.execute(world);
         renderer.render(world);
 
+        Simulation simulation = new Simulation();
+        simulation.nextTurn();
+
     }
 }
