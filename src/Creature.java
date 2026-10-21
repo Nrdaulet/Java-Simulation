@@ -8,5 +8,5 @@ public abstract class Creature extends Entity{
         this.health = health;
     }
 
-    public abstract void makeMove();
+    public abstract void makeMove(World world);
 }

@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class Simulation {
-    World world = new World(5,5);
+    World world = new World(10,10);
 
     private int turnCounter;
     private final List<Action> initActions;
@@ -9,12 +9,11 @@ public class Simulation {
     Renderer renderer = new Renderer();
 
 
-    public Simulation(){}
-
-    public Simulation(List<Action> initActions, List<Action> turnActions) {
+    public Simulation(List<Action> initActions, List<Action> turnActions){
         this.initActions = initActions;
         this.turnActions = turnActions;
     }
+
 
     public void nextTurn(){
         turnCounter++;

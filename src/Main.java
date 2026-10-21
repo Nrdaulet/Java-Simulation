@@ -1,6 +1,6 @@
 public class Main{
     public static void main(String[] args){
-        World world = new World(5, 5);
+        World world = new World(10, 10);
 
 
 
@@ -11,9 +11,6 @@ public class Main{
         InitWorldAction initWorldAction = new InitWorldAction();
         initWorldAction.execute(world);
         renderer.render(world);
-
-        Simulation simulation = new Simulation();
-        simulation.nextTurn();
 
     }
 }
