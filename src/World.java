@@ -64,6 +64,5 @@ public class World {
         map.put(to, entity);
         entity.setCoordinates(to);
         return true;
-
     }
 }
