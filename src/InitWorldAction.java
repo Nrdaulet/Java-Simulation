@@ -7,7 +7,6 @@ public class InitWorldAction implements Action{
         world.setEntity(new Coordinates(0,2), new Rock());
         world.setEntity(new Coordinates(3,2), new Tree());
         world.setEntity(new Coordinates(2,2), new Grass());
-        world.removeEntity(new Coordinates(2, 8));
         world.moveEntity(new Coordinates(1, 4), new Coordinates(7,6));
 
     }

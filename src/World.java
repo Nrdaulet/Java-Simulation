@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class World {
@@ -64,5 +66,9 @@ public class World {
         map.put(to, entity);
         entity.setCoordinates(to);
         return true;
+    }
+
+    public List<Entity> getAllEntities(){
+        return new ArrayList<>(map.values());
     }
 }

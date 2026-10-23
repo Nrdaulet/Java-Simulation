@@ -12,5 +12,11 @@ public class Main{
         initWorldAction.execute(world);
         renderer.render(world);
 
+        System.out.println("--------------------");
+
+        MoveAllCreaturesAction m = new MoveAllCreaturesAction();
+        m.execute(world);
+        renderer.render(world);
+
     }
 }

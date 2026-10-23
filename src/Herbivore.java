@@ -8,7 +8,8 @@ public class Herbivore extends Creature{
 
     @Override
     public void makeMove(World world) {
-
+        Coordinates current = getCoordinates();
+        world.moveEntity(current, new Coordinates(9,4));
     }
 
     public int getHp() {
