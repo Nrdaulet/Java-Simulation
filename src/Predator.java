@@ -1,5 +1,5 @@
 public class Predator extends Creature{
-    private final int damage = 2;
+    private static final int damage = 2;
 
     public Predator(int speed, int health) {
         super("🐺", speed, health);
@@ -8,7 +8,7 @@ public class Predator extends Creature{
     @Override
     public void makeMove(World world) {
         Coordinates current = getCoordinates();
-        world.moveEntity(current, new Coordinates(7,9));
+        world.moveEntity(current, new Coordinates(current.col()+1,current.row()+1));
 
     }
 
