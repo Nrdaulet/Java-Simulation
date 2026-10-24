@@ -14,9 +14,8 @@ public class Main{
 
         System.out.println("--------------------");
 
-        MoveAllCreaturesAction m = new MoveAllCreaturesAction();
-        m.execute(world);
+//        MoveAllCreaturesAction m = new MoveAllCreaturesAction();
+//        m.execute(world);
         renderer.render(world);
-
     }
 }

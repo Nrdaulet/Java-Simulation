@@ -2,7 +2,7 @@ public class Predator extends Creature{
     private static final int damage = 2;
 
     public Predator(int speed, int health) {
-        super("🐺", speed, health);
+        super("🐺", speed);
     }
 
     @Override
