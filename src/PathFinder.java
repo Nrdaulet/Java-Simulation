@@ -10,15 +10,31 @@ public class PathFinder {
 
         Queue<Coordinates> queue = new ArrayDeque<>();
 
-        queue.offer(e1.getCoordinates());
-        queue.offer(e1.getCoordinates());
+
 
         Set<Coordinates> visited = new HashSet<>();
-        ;
+
+        queue.offer(c1); // Кладем стартовую координаты в очередь и в посещенные
+        visited.add(c1);
+
+        int[][] fourDir = {
+                {1, 0},
+                {-1, 0},
+                {0, 1},
+                {0,-1}};
+
+        Coordinates current = queue.poll();
 
         while(!queue.isEmpty()){
-            if(e1.getCoordinates() == )
+            for(int[] direction : fourDir){
+                Coordinates next = new Coordinates(
+                        current.col()+direction[0],
+                        current.row()+direction[1]
+                );
+            }
         }
+
+
         return true;
 
     }
