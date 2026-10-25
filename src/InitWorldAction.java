@@ -15,7 +15,7 @@ public class InitWorldAction implements Action{
         Coordinates c5 = new Coordinates(1,0);
         world.setEntity(c3, rock1);
         world.setEntity(c4, rock2);
-//        world.setEntity(c5, rock3);
+        world.setEntity(c5, rock3);
         world.setEntity(c1, predator);
         world.setEntity(c2, herbivore);
         world.setEntity(new Coordinates(2, 8), new Herbivore(2,6));

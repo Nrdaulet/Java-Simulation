@@ -26,7 +26,9 @@ public class Simulation {
     }
 
     public void pauseSimulation(){
-
+        if (world.isEmpty()){
+            System.out.println("Do nothing");
+        }
     }
     
 }
