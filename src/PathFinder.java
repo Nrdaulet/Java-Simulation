@@ -1,15 +1,15 @@
 import java.util.*;
 
 public class PathFinder{
-    public boolean pathFinder(Coordinates c1, Coordinates c2, World world){
+    public List<Coordinates> find(Coordinates start, Class<? extends Entity> targetType, World world){
 
         Queue<Coordinates> queue = new ArrayDeque<>();
         Set<Coordinates> visited = new HashSet<>();
 
-        Map<Coordinates, Coordinates> path;
+        Map<Coordinates, Coordinates> cameFrom = new HashMap<>();
 
-        queue.offer(c1); // Кладем стартовую координаты в очередь и в посещенные
-        visited.add(c1);
+        queue.offer(start); // Кладем стартовую координаты в очередь и в посещенные
+        visited.add(start);
 
         int[][] fourDir = {
                 {1, 0},
@@ -26,10 +26,13 @@ public class PathFinder{
                         current.col()+direction[0],
                         current.row()+direction[1]
                 );
-                if(!visited.contains(next) && world.isInBounds(next)){
-                    if(next.equals(c2)) return true;
+                if(world.isInBounds(next) &&!visited.contains(next)){
+                    if(targetType.isInstance(world.getEntity(next))) return null;
                     visited.add(next);
-                    if(world.isEmpty(next))queue.offer(next);
+                    if(world.isEmpty(next)){
+                        queue.offer(next);
+                        cameFrom.put(next, current);
+                    }
 
                 }
 
@@ -37,7 +40,7 @@ public class PathFinder{
         }
 
 
-        return false;
+        return null;
 
     }
 }

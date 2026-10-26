@@ -26,7 +26,7 @@ public class Simulation {
     }
 
     public void pauseSimulation(){
-        if (world.isEmpty()){
+        if (world.isEmpty(new Coordinates(4,2))){
             System.out.println("Do nothing");
         }
     }
