@@ -27,7 +27,19 @@ public class PathFinder{
                         current.row()+direction[1]
                 );
                 if(world.isInBounds(next) &&!visited.contains(next)){
-                    if(targetType.isInstance(world.getEntity(next))) return null;
+                    if(targetType.isInstance(world.getEntity(next))){
+                        cameFrom.put(next, current);
+
+                        List<Coordinates> path = new ArrayList<>(); // out path
+                        Coordinates step = next; // there i
+                        while (!step.equals(start)){
+                            path.add(step);
+                            step = cameFrom.get(step);
+                        }
+                        Collections.reverse(path);
+                        return path;
+
+                    }
                     visited.add(next);
                     if(world.isEmpty(next)){
                         queue.offer(next);
