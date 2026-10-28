@@ -5,7 +5,7 @@ public class InitWorldAction implements Action{
         Coordinates coordinates = new Coordinates(0,0);
 
         world.setEntity(coordinates, new Herbivore(4,10));
-//        world.setEntity(new Coordinates(1,1), new Grass());
+        world.setEntity(new Coordinates(9,1), new Grass());
         PathFinder pathFinder = new PathFinder();
         System.out.println(pathFinder.find(coordinates,Grass.class,world));
 

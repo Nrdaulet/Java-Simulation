@@ -20,7 +20,7 @@ public class PathFinder{
 
 
         while(!queue.isEmpty()){
-            Coordinates current = queue.poll();
+            Coordinates current = queue.poll(); // Берем текущую
             for(int[] direction : fourDir){
                 Coordinates next = new Coordinates(
                         current.col()+direction[0],
