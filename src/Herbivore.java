@@ -15,15 +15,15 @@ public class Herbivore extends Creature{
         List<Coordinates> path = pathFinder.find(getCoordinates(), Grass.class, world);
         System.out.println(path);
 
-        if(path.size() <= getSpeed()){
-            world.removeEntity(path.getLast());
-            return;
-        }
+
+        if(path.isEmpty()) return;
         int steps = Math.min(getSpeed(), path.size() - 1);
         for(int i = 0;i<steps;i++){
             world.moveEntity(getCoordinates(), path.get(i));
-
-
+        }
+        if(path.size() <= getSpeed()){
+            world.removeEntity(path.getLast());
+            world.moveEntity(getCoordinates(),path.getLast());
         }
 
 

@@ -10,7 +10,7 @@ public class Main{
         Renderer renderer = new Renderer();
         InitWorldAction initWorldAction = new InitWorldAction();
         initWorldAction.execute(world);
-        renderer.render(world);
+        renderer.render2(world);
 
         System.out.println("--------------------");
 
