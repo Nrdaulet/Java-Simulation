@@ -71,4 +71,8 @@ public class World {
     public List<Entity> getAllEntities(){
         return new ArrayList<>(map.values());
     }
+
+    public void replaceEntity( Coordinates c1){
+        removeEntity(c1);
+    }
 }

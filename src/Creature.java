@@ -7,7 +7,9 @@ public abstract class Creature extends Entity{
         super(icon);
     }
 
-
+    public int getSpeed(){
+        return speed;
+    }
 
     public abstract void makeMove(World world);
 }

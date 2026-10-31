@@ -52,7 +52,7 @@ public class PathFinder{
         }
 
 
-        return null;
+        return new ArrayList<>();
 
     }
 }

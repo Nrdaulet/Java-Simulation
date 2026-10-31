@@ -6,11 +6,8 @@ public class InitWorldAction implements Action{
 
         world.setEntity(coordinates, new Herbivore(4,10));
         world.setEntity(new Coordinates(9,1), new Grass());
-        PathFinder pathFinder = new PathFinder();
-        System.out.println(pathFinder.find(coordinates,Grass.class,world));
+//        world.setEntity(new Coordinates(9,9), new Grass());
 
-        System.out.println();
-        System.out.println();
 
     }
 }
